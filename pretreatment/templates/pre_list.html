@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Singeling</h3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Flame Distribution</th>
+            <th>Colour of Flame</th>
+            <th>Speed</th>
+            <th>Action</th>
+        </thead>
+        {% for i in object1%}
+        <tr>
+            <td>{{i.time_stamp}}</td>
+            <td>{{i.flame_distribution}}</td>
+            <td>{{i.colour_of_flame}}</td>
+            <td>{{i.speed}}</td>
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<H3>Desizing Mangle</H3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Temperature</th>
+            <th>Impregnation</th>
+            <th>Action</th>
+        </thead>
+        {% for i in object2%}
+        <tr>
+            <td>{{i.time_stamp}}</td>
+            <td>{{i.temperature}}</td>
+            <td>{{i.impregnation}}</td>
+            
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<h3>Merceriser</h3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Rectofact Performance</th>
+            <th>Fibre Deviation</th>
+            
+            
+            <th>flow spraying units</th>
+            
+            <th>Lagoon Temperature</th>
+            
+            
+            <th>Final Width of Mercerised Cloth</th>
+            <th>Phenolphthalein Drop</th>
+            <th>Action</th>
+        </thead>
+        {% for i in object3%}
+        <tr>
+            <td>{{i.time_stamp}}</td>
+            <td>{{i.rectofact_performance}}</td>
+            <td>{{i.fibre_deviation}}</td>
+            
+        
+            <td>{{i.flow_on_spraying_units}}</td>
+            
+            <td>{{i.water_flow_from_washing_units_to_lagoon}}</td>
+            <td>{{i.lagoon_temperature}}</td>
+            
+            
+            <td>{{i.final_width_of_mercerised_cloth}}</td>
+            <td>{{i.caustic_check_Phenolphthalein_drop}}</td>
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<h3>Stenter 6</h3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Rectofact Performance</th>
+            <th>Fibre Deviation</th>
+            <th>Impregnation Temperature</th>
+            
+            <th>Drying Temperature 6 Chambers</th>
+            <th>End Moisture</th>
+            
+            <th>Action</th>
+        </thead>
+        {% for i in object4%}
+        <tr>
+            <td>{{i.time_stamp}}</td>
+            <td>{{i.Rectofact_performance}}</td>
+            <td>{{i.fibre_deviation}}</td>
+            <td>{{i.impregnation_temperature}}</td>
+            
+            <td>{{i.drying_temperature_6_chambers}}</td>
+            <td>{{i.end_moisture}}</td>
+            
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock%}

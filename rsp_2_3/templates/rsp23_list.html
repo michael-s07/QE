@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Woodin Institution</h3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Drying Temperature</th>
+            <th>Speed</th>
+            <th>Cloth Width Total</th>
+            <th>Check on Fitting</th>
+            <th>Penetration</th>
+            <th>Colour Marking Off</th>
+            <th>Printing Folds</th>
+            <th>Other Defects</th>
+            <th>Action</th>
+        </thead>
+        {% for i in object1%}
+        <tr>
+            <td>{{i.time_stamp}}</td>
+            <td>{{i.drying_temperature}}</td>
+            <td>{{i.speed}}</td>
+            <td>{{i.cloth_width_total}}</td>
+            
+            <td>{{i.check_on_fitting}}</td>
+            <td>{{i.penetration}}</td>
+            <td>{{i.colour_marking_off}}</td>
+            <td>{{i.printing_folds}}</td>
+            <td>{{i.other_defects}}</td>
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Adepa Base Nustyle Safoa</h3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Drying Temperature</th>
+            <th>Speed</th>
+            <th>Base Colour Misfit</th>
+            <th>Selvedge Effect</th>
+            <th>White Patches</th>
+            
+            <th>Colour Marking Off</th>
+            <th>Other Defects</th>
+            <th>Action</th>
+        </thead>
+        {% for i in object1%}
+        <tr>
+            <td>{{i.time_stamp}}</td>
+            <td>{{i.drying_temperature}}</td>
+            <td>{{i.speed}}</td>
+            <td>{{i.base_colour_misfit}}</td>
+            <td>{{i.selvedge_effect}}</td>
+            <td>{{i.white_patches}}</td>
+            
+            <td>{{i.color_marking_off}}</td>
+            <td>{{i.other_defect}}</td>
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<h3>Steamer</h3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Temperature</th>
+            <th>Speed</th>
+            
+            <th>Action</th>
+        </thead>
+        {% for i in object2%}
+        <tr>
+            <td>{{i.time_stamp}}</td>
+            <td>{{i.temperature}}</td>
+            <td>{{i.speed}}</td>
+            
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>OWS</h3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Temperature Washing</th>
+            <th>Units Squeezing Pressures</th>
+            <th>Action</th>
+        </thead>
+        {% for i in object3%}
+        <tr>
+            <td>{{i.time_stamp}}</td>
+            <td>{{i.temperatures_washing}}</td>
+            <td>{{i.units_squeezing_pressures}}</td>
+            
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

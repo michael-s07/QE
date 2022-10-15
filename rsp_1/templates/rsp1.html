@@ -1,0 +1,28 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron text-center">
+  <h1>RSP 1 Department </h1>
+  <p>GTP Qaulity and Evaluation Check Routine!</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Double Run Institution Woodin</h3>
+      <form method="POST">
+        <table>
+          <div class="form-group">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+          </div>
+        </table>
+        <div class="d-grid gap-2">
+          <input type="submit" class="btn btn-success" value="Save">
+        </div>
+    </form>
+    </div>  
+  </div>
+</div>
+{% endblock %}
