@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<h3>Stenter 5</h3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Straightness of Design</th>
+            <th>Straightness of Fibre</th>
+            <th>Moisture Outfeed Cloth Width</th>
+            <th>Action</th>
+        </thead>
+        {% for q in object1 %}
+        <tr>
+            <td>{{q.time_stamp}}</td>
+            <td>{{q.straightness_of_design}}</td>
+            <td>{{q.straightness_of_fibre}}</td>
+            <td>{{q.moisture_outfeed_cloth_with}}</td>
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Stenter 7</h3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Straightness of Design</th>
+            <th>Straightness of Fibre</th>
+            <th>Moisture Outfeed Cloth Width</th>
+            <th>Action</th>
+        </thead>
+        {% for i in object2%}
+        <tr>
+            <td>{{q.time_stamp}}</td>
+            <td>{{q.straightness_of_design}}</td>
+            <td>{{q.straightness_of_fibre}}</td>
+            <td>{{q.moisture_outfeed_cloth_with}}</td>
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Calender</h3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Eveness of Shiny Effect</th>
+            <th>Temperature </th>
+            <th>Speed Fancy Woodin Dumas</th>
+            <th>Action</th>
+        </thead>
+        {% for i in object1%}
+        <tr>
+            <td>{{i.time_stamp}}</td>
+            <td>{{i.eveness_of_shiny_effect}}</td>
+            <td>{{i.temperature}}</td>
+            <td>{{i.speed_fancy_woodin_dumas}}</td>
+            
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Baking Oven</h3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Loop</th>
+            <th>Spread</th>
+            <th>Residence Time</th>
+            <th>Temperature Comp 2</th>
+            <th>Action</th>
+        </thead>
+        {% for i in object4 %}
+        <tr>
+            <td>{{i.time_stamp}}</td>
+            <td>{{i.loop}}</td>
+            <td>{{i.spread}}</td>
+            <td>{{i.residence_time}}</td>
+            <td>{{i.temperature}}</td>
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

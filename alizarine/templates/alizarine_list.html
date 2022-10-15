@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Welcome, {{request.user}}</h2>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Water Flow Comp 1</th>
+            <th>Water Temperature Comp 1</th>
+            <th>Water Exit Comp 1</th>
+            <th>Water Flow comp 1</th>
+            <th>Water Temperature Comp 2</th>
+            <th>Water Flow Comp 3</th>
+            <th>Water Temperature Comp 3</th>
+            <th>Staining</th>
+            <th>Action</th>
+        </thead>
+        {% for i in object1%}
+        <tr>
+            <td>{{i.time_stamp}}</td>
+            <td>{{i.water_flow_comp_1}}</td>
+            <td>{{i.water_temperatures_comp_1}}</td>
+            <td>{{i.water_exit_comp_1}}</td>
+            <td>{{i.water_flow_comp_2}}</td>
+            <td>{{i.water_temperatures_comp_2}}</td>
+            <td>{{i.water_flow_comp_3}}</td>
+            <td>{{i.water_temperatures_comp_3}}</td>
+            <td>{{i.staining}}</td>
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Soaper 2</h3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Water Flow Comp 1</th>
+            <th>Water Temperature Comp 1</th>
+            <th>Water Exit Comp 1</th>
+            <th>Water Flow comp 1</th>
+            <th>Water Temperature Comp 2</th>
+            <th>Water Flow Comp 3</th>
+            <th>Water Temperature Comp 3</th>
+            <th>Staining</th>
+            <th>Action</th>
+        </thead>
+        {% for i in object2%}
+        <tr>
+            <td>{{i.time_stamp}}</td>
+            <td>{{i.water_flow_comp_1}}</td>
+            <td>{{i.water_temperatures_comp_1}}</td>
+            <td>{{i.water_exit_comp_1}}</td>
+            <td>{{i.water_flow_comp_2}}</td>
+            <td>{{i.water_temperatures_comp_2}}</td>
+            <td>{{i.water_flow_comp_3}}</td>
+            <td>{{i.water_temperatures_comp_3}}</td>
+            <td>{{i.staining}}</td>
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Soaper 4</h3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Staining</th>
+            <th>Action</th>
+        </thead>
+        {% for i in object3%}
+        <tr>
+            <td>{{i.time_stamp}}</td>
+            <td>{{i.staining}}</td>
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Plain Dyeing</h3>
+<table class="table table-stripped">
+    <tbody>
+        <thead>
+            <th>Time</th>
+            <th>Beam Absorption</th>
+            <th>Other Detects</th>
+            <th>Action</th>
+        </thead>
+        {% for i in object4%}
+        <tr>
+            <td>{{i.time_stamp}}</td>
+            <td>{{i.beam_absorption}}</td>
+            <td>{{i.other_defects}}</td>
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock%}

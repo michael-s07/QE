@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality & Ealvaluation GTP</title>
+</head>
+<body>
+    <ul class="nav justify-content-end text-bg-dark p-3">
+        <li class="nav-item">
+          <a class="nav-link disabled" style="color:white">Welcome  </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin">{{ request.user }}</a>
+        </li>
+        
+      </ul>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link"  href="pre">Pre Treatment</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pre/list">Pre Treatment List</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="rsp1">RSP 1</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="rsp1/list">RSP List</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="rsp23">RSP 2 & 3</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="rsp23/list">RSP 2 and 3 List</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="rsp45">RSP 4 and 5</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="rsp45/list">RSP 4 & 5 List</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="finish">Finish</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="finish/list">Finish List</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="making">Making Up</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="making/list">Making Up List</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="alizarine">Alizarine</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="alizarine/list">Alizarine List</a>
+                    </li>
+                  </ul>
+
+            </div>
+            <div class="col-md-10">
+                {% block content %}
+
+                {% endblock %}
+
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>    
+
+</body>
+</html>

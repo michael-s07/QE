@@ -1,0 +1,32 @@
+{% extends  'base.html' %}
+{% block content %}
+<div class="jumbotron text-center">
+    <h1>Making -Up Department List</h1>
+    <p>GTP Qaulity and Evaluation Check Routine!</p>
+    <h3>Finishing Pieces</h3>
+  </div>
+
+
+<table class="table table-stripped">
+    <thead>
+        <th>Time </th>
+        <th>Specification check on defects</th>
+        <th>Quality of labeling</th>
+        <th>Action</th>
+        
+
+    </thead>
+    <tbody>
+        {% for i in object %}
+        <tr>
+            <td>{{ i.time_stamp }}</td>
+            <td>{{ i.specification_check_on_defects }}</td>
+            <td>{{ i.Quality_of_labeling }}</td>
+            <td ><button class="btn btn-warning">Delete</button><button class="btn btn-primary">Update</button></td>
+            <td ></td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

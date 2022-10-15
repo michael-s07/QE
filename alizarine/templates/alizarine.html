@@ -1,0 +1,71 @@
+
+{%  extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1>Alizarine Department </h1>
+    <p>GTP Qaulity and Evaluation Check Routine!</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h3>Soaper 1</h3>
+            <form method="post">
+                <table class="">
+                    <div class="form-group">
+                        {% csrf_token %}
+                        {{ form1.as_p }}
+                    </div>  
+                </table>
+                <div class="d-grid gap-2">
+                    <input type="submit" class="btn btn-success" value="Save">
+                </div>
+                  
+              </form>
+        </div>
+        <div class="col-md-3">
+            <h3>Soaper 2</h3>
+            <form method="post">
+                <table class="">
+                    <div class="form-group">
+                        {% csrf_token %}
+                        {{ form2.as_p }}
+                    </div>
+                </table>
+                <div class="d-grid gap-2">
+                    <input type="submit" class="btn btn-success" value="Save">
+                </div>
+              </form>
+        </div>
+        <div class="col-md-3">
+            <h3>Soaper 4</h3>
+            <form method="post">
+                <table class="">
+                    <div class="form-group">
+                        {% csrf_token %}
+                        {{ form3.as_p }}
+                    </div>
+                </table>
+                <div class="d-grid gap-2">
+                    <input type="submit" class="btn btn-success" value="Save">
+                </div> 
+              </form>
+        </div>
+        <div class="col-md-3">
+            <h3>Plain Dyeing</h3>
+            <form method="post">
+                <table class="">
+                    <div class="form-group">
+                        {% csrf_token %}
+                        {{ form4.as_p }}
+                    </div>
+                </table>
+                <div class="d-grid gap-2">
+                    <input type="submit" class="btn btn-success" value="Save">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
